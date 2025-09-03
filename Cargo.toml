@@ -58,7 +58,7 @@ jobserver = "0.1"
 jwt = { package = "jsonwebtoken", version = "9", optional = true }
 libc = "0.2.153"
 linked-hash-map = "0.5"
-log = "0.4"
+log = { version = "0.4", features = ["max_level_trace", "release_max_level_trace" ] }
 memchr = "2"
 memmap2 = "0.9.4"
 mime = "0.3"

@@ -1504,6 +1504,7 @@ where
             if var == "CARGO_MAKEFLAGS" || var.starts_with("CARGO_REGISTRIES_") {
                 continue;
             }
+            log::debug!("hashing var {var:?}={val:?}");
 
             var.hash(&mut HashToDigest { digest: &mut m });
             m.update(b"=");
